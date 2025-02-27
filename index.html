@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkTree - Pense.try</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./src/CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./src/Img/Logo.png" alt="Logo" class="logo">
+        <p class="instagram">@_pense.try</p>
+        <div class="links">
+            <a href="https://exemplo.com/link1" class="link-btn">
+                <img src="./src/Img/local-na-rede-internet.png" alt="Ícone do site">
+                <span>Site - Pense.try</span>
+                <span class="link-icon" onclick="shareOnly(event, 'https://www.google.com.br/')"><i class="fas fa-external-link-alt"></i></span>
+            </a>
+            <a href="https://exemplo.com/link1" class="link-btn">
+                <img src="./src/Img/behance.png" alt="Ícone">
+                <span>Behance - Portifólio - Pense.try</span>
+                <span class="link-icon" onclick="shareOnly(event, 'https://www.google.com.br/')"><i class="fas fa-external-link-alt"></i></span>
+            </a>
+            <a href="https://exemplo.com/link1" class="link-btn">
+                <img src="./src/Img/whatsapp.png" alt="Ícone">
+                <span>Whatsapp</span>
+                <span class="link-icon" onclick="shareOnly(event, 'https://www.google.com.br/')"><i class="fas fa-external-link-alt"></i></span>
+            </a>
+            <a href="https://exemplo.com/link1" class="link-btn">
+                <img src="./src/Img/linkedin.png" alt="Ícone">
+                <span>LinkedIn</span>
+                <span class="link-icon" onclick="shareOnly(event, 'https://www.google.com.br/')"><i class="fas fa-external-link-alt"></i></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Notificação de link copiado -->
+    <div id="copy-notification" class="hidden">Link copiado!</div>
+
+    <script src="./src/JS/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* Reset e estilo global */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estrutura principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Logo */
+.logo {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Arroba */
+.instagram {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Links estilizados */
+.links {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.link-btn {
+    background-image: linear-gradient(to left, #5733af, #643bc3, #7142d6, #7e4aeb, #8c52ff);
+    color: #ffffff;
+    border-radius: calc(infinity * 1px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link-btn:hover {
+    background-image: linear-gradient(to left, #5733af, #643bc3, #7142d6, #7e4aeb, #8c52ff);
+}
+
+.link-btn img {
+    width: 40px;    
+    height: 40px;
+}
+
+/* Ícone de compartilhar tem um clique separado */
+.share-icon {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+/* Notificação de link copiado */
+#copy-notification {
+    position: fixed;
+    bottom: -50px; /* Começa escondido */
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(to left, #5733af, #643bc3, #7142d6, #7e4aeb, #8c52ff);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: calc(infinity * 1px);
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none; /* Impede cliques enquanto invisível */
+}
+
+/* Keyframes para a animação de entrada e saída */
+@keyframes slideIn {
+    from {
+        bottom: -50px;
+        opacity: 0;
+    }
+    to {
+        bottom: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        bottom: 20px;
+        opacity: 1;
+    }
+    to {
+        bottom: -50px;
+        opacity: 0;
+    }
+}
+
+/* Classe para exibir o banner com animação */
+.show {
+    animation: slideIn 0.4s ease-out forwards;
+}
+
+/* Classe para esconder o banner com animação */
+.hide {
+    animation: slideOut 0.4s ease-in forwards;
+}
+
+
+@media screen and (max-width: 600px) {
+    .logo {
+        max-width: 150px;
+    }   
+    .container {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .links {
+        max-width: 80%;
+        padding: 0;
+    }
+    .link-btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
